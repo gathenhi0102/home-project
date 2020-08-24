@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"os"
 
 	auth "go_modules/auth"
 
@@ -18,9 +17,6 @@ func main() {
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
-
-	connectionString := os.Getenv("DB_PRIVACY_CONNECTION")
-	fmt.Println(connectionString)
 
 	router := httprouter.New()
 
